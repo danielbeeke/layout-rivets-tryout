@@ -39,6 +39,13 @@ $( document ).ready(function() {
                     expanded: false,
                     collapsed: false
                 };
+            },
+            saveState: function () {
+                localStorage.setItem('layoutState', JSON.stringify(rivetsData.layout));
+            },
+            restoreState: function () {
+                var oldState = JSON.parse(localStorage.getItem('layoutState'));
+                rivetsData.layout = oldState;
             }
         }
     };
