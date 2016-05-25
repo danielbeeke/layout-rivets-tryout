@@ -24,14 +24,12 @@ html, body {
   height: 100%;
   background: red;
   position: relative;
-  transition: all $speed $easing;
 }
 
 .panel {
   width: 50%;
   height: 100%;
   position: absolute;
-  transition: all $speed $easing;
 
   &.left {
     background: green;
@@ -58,7 +56,6 @@ html, body {
   background: blue;
   position: absolute;
   left: 0;
-  transition: all $speed $easing;
 }
 
 .panels-container {
@@ -66,7 +63,6 @@ html, body {
   width: calc(100% - #{$sidebarWidth});
   position: absolute;
   right: 0;
-  transition: all $speed $easing;
 }
 
 .has-sidebar-collapsed {
@@ -76,5 +72,11 @@ html, body {
 
   .panels-container {
     width: calc(100% - #{$sidebarWidthSmall});
+  }
+}
+
+.transitions-enabled {
+  .layout-container, .panel, .sidebar, .panels-container {
+    transition: all $speed $easing;
   }
 }
