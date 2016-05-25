@@ -70,4 +70,4 @@ rivets.bind($('#layout-container'), rivetsData);
 
 setTimeout(function () {
     $('body').addClass('transitions-enabled');
-}, 300);
+}, 100);

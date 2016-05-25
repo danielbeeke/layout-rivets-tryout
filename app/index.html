@@ -25,7 +25,7 @@
     <div class="sidebar">
       <button rv-on-click="functions.toggleSidebar">Toggle</button>
 
-      <button rv-on-click="functions.setPanelsBothMiddle">Medium</button>
+      <button rv-on-click="functions.setPanelsBothMiddle" rv-unless="layout.panel.left.expanded | any layout.panel.right.expanded">Medium</button>
 
       <button rv-on-click="functions.saveState">Save state</button>
 
@@ -57,7 +57,8 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+  <script src="scripts/rivets.binders.js"></script>
+  <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>
