@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>layout</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+
+  <div class="layout-container" rv-class-has-sidebar-collapsed="sidebar.collapsed" id="layout-container">
+    <div class="sidebar">
+
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left" rv-class-is-expanded="panel.left.expanded" rv-class-is-collapsed="panel.left.collapsed"></div>
+      <div class="panel right" rv-class-is-expanded="panel.right.expanded" rv-class-is-collapsed="panel.right.collapsed"></div>
+    </div>
+  </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/sightglass/index.js"></script>
+    <script src="/bower_components/rivets/dist/rivets.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

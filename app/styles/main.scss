@@ -1,0 +1,81 @@
+// bower:scss
+// endbower
+
+$sidebarWidth: 300px;
+$sidebarWidthSmall: 80px;
+
+$speed: .8s;
+$easing: ease-in-out;
+
+body {
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.layout-container {
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: relative;
+  transition: all $speed $easing;
+}
+
+.panel {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: all $speed $easing;
+
+  &.left {
+    background: green;
+    left: 0;
+  }
+
+  &.right {
+    background: yellow;
+    right: 0;
+  }
+
+  &.is-collapsed {
+    width: $sidebarWidthSmall;
+  }
+
+  &.is-expanded {
+    width: calc(100% - #{$sidebarWidthSmall});
+  }
+}
+
+.sidebar {
+  width: $sidebarWidth;
+  height: 100%;
+  background: blue;
+  position: absolute;
+  left: 0;
+  transition: all $speed $easing;
+}
+
+.panels-container {
+  height: 100%;
+  width: calc(100% - #{$sidebarWidth});
+  position: absolute;
+  right: 0;
+  transition: all $speed $easing;
+}
+
+.has-sidebar-collapsed {
+  .sidebar {
+    width: $sidebarWidthSmall;
+  }
+
+  .panels-container {
+    width: calc(100% - #{$sidebarWidthSmall});
+  }
+
+}
