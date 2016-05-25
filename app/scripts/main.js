@@ -46,6 +46,9 @@ window.rivetsData = {
             if (oldState) {
                 rivetsData.layout = oldState;
             }
+        },
+        bothPanelsAreMedium: function (a, b) {
+            return a == b && a == false;
         }
     }
 };
