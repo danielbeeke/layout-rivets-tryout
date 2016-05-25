@@ -21,11 +21,11 @@ window.rivetsData = {
         toggleSidebar: function () {
             rivetsData.layout.sidebar.collapsed = !rivetsData.layout.sidebar.collapsed;
         },
-        setPanelLeftFullscreen: function () {
-            setPanelFullscreen('left');
+        setPanelLeftBig: function () {
+            setPanelBig('left');
         },
-        setPanelRightFullscreen: function () {
-            setPanelFullscreen('right');
+        setPanelRightBig: function () {
+            setPanelBig('right');
         },
         setPanelsBothMiddle: function () {
             rivetsData.layout.panel.left = {
@@ -55,7 +55,7 @@ window.rivetsData = {
 
 rivetsData.functions.restoreState();
 
-function setPanelFullscreen(panelName) {
+function setPanelBig(panelName) {
     var oppositePanelName = panelName == 'left' ? 'right' : 'left';
 
     rivetsData.layout.panel[panelName] = {

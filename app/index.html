@@ -35,12 +35,12 @@
     <div class="panels-container">
 
       <div class="panel left" rv-class-is-expanded="layout.panel.left.expanded" rv-class-is-collapsed="layout.panel.left.collapsed">
-        <button rv-on-click="functions.setPanelLeftFullscreen" rv-unless="layout.panel.left.expanded">Big</button>
+        <button rv-on-click="functions.setPanelLeftBig" rv-unless="layout.panel.left.expanded">Big</button>
         <button rv-on-click="functions.setPanelsBothMiddle" rv-if="layout.panel.left.expanded">Medium</button>
       </div>
 
       <div class="panel right" rv-class-is-expanded="layout.panel.right.expanded" rv-class-is-collapsed="layout.panel.right.collapsed">
-        <button rv-on-click="functions.setPanelRightFullscreen" rv-unless="layout.panel.right.expanded">Big</button>
+        <button rv-on-click="functions.setPanelRightBig" rv-unless="layout.panel.right.expanded">Big</button>
         <button rv-on-click="functions.setPanelsBothMiddle" rv-if="layout.panel.right.expanded">Medium</button>
       </div>
 
