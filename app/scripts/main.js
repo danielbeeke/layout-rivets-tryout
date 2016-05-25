@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    var rivetsData = {
+    window.rivetsData = {
         layout: {
             sidebar: {
                 collapsed: true
@@ -19,23 +19,24 @@ $( document ).ready(function() {
 
     rivets.bind($('#layout-container'), rivetsData);
 
-    setTimeout(function () {
-        rivetsData.layout = {
-            sidebar: {
+    // Paste the following in the console:
+
+    /*
+    rivetsData.layout = {
+        sidebar: {
+            collapsed: false
+        },
+        panel: {
+            left: {
+                expanded: true,
                 collapsed: false
             },
-            panel: {
-                left: {
-                    expanded: true,
-                    collapsed: false
-                },
-                right: {
-                    expanded: false,
-                    collapsed: true
-                }
+            right: {
+                expanded: false,
+                collapsed: true
             }
-        };
-    }, 2000)
-
+        }
+    };
+    */
 });
 
