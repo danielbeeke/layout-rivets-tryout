@@ -4,8 +4,8 @@
 $sidebarWidth: 300px;
 $sidebarWidthSmall: 80px;
 
-$speed: .8s;
-$easing: ease-in-out;
+$speed: .6s;
+$easing: cubic-bezier(.75,.07,.4,.89);
 
 html, body {
   padding: 0;
