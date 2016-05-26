@@ -7,12 +7,6 @@ $sidebarWidthSmall: 80px;
 $speed: .8s;
 $easing: ease-in-out;
 
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-}
-
 html, body {
   padding: 0;
   margin: 0;
@@ -24,14 +18,18 @@ html, body {
   height: 100%;
   background: red;
   position: relative;
+  // Hides the scroll if we use non linear transitions and animate the width.
   overflow-x: hidden;
 }
 
 .panel {
+  // Initial state 'medium'.
   width: 50%;
   height: 100%;
   position: absolute;
 
+  // Modifiers for these objects.
+  // Modifiers are always at the bottom, as a result of cascading style sheets.
   &.left {
     background: green;
     left: 0;
@@ -42,11 +40,14 @@ html, body {
     right: 0;
   }
 
+  // State 'small'.
   &.is-collapsed {
     width: $sidebarWidthSmall;
   }
 
+  // State 'big'.
   &.is-expanded {
+    // This syntax is needed inside a calc because of sass's limitations.
     width: calc(100% - #{$sidebarWidthSmall});
   }
 }
@@ -66,6 +67,8 @@ html, body {
   right: 0;
 }
 
+// Modifier for the sidebar.
+// This is set on the parent because of the effects on multiple objects.
 .has-sidebar-collapsed {
   .sidebar {
     width: $sidebarWidthSmall;
@@ -76,8 +79,9 @@ html, body {
   }
 }
 
+// We only add transitions when our rendering is done for the first time.
 .transitions-enabled {
   .layout-container, .panel, .sidebar, .panels-container {
-    transition: all $speed $easing;
+    transition: width $speed $easing;
   }
 }

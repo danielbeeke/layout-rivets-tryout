@@ -1,5 +1,7 @@
+// Our namespace.
 window.octopus = {};
 
+// For this component we use the namespace layout.
 octopus.layout = {
     toggleSidebar: function () {
         rivetsData.layout.sidebar.collapsed = !rivetsData.layout.sidebar.collapsed;
@@ -48,6 +50,7 @@ octopus.layout = {
     }
 };
 
+// The object with the state of the layout.
 window.rivetsData = {
     layout: {
         sidebar: {
@@ -71,10 +74,15 @@ window.rivetsData = {
     functions: octopus.layout
 };
 
+// Restore the intial state.
 octopus.layout.restoreState();
 
+// Bind the rivetsData to the template.
 rivets.bind($('#layout-container'), rivetsData);
 
+// A small trick to block transitions on page load.
+// Because we use a renderer we are a little late when rendering and
+// because of that transitions kick in on initial page load.
 setTimeout(function () {
     $('body').addClass('transitions-enabled');
 }, 100);
