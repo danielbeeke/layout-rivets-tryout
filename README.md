@@ -6,10 +6,10 @@ This repo is an example how you can use rivets to have a layout that is maintain
 
 For this example I have used the abstract idea that layouts/UI's are a bit like a face.
 A face has 'presets': smiling, lauching, crying, thinking, eating.
-These presets are a combination tension on muscles in the face. So for laughing you maybe need 20 specific muscles,
- for thinking maybe 10 completely other. 
+These presets are a combination of tension on muscles in the face. So for laughing you maybe need 20 specific muscles,
+ for thinking maybe 10 different one. 
  
-## Back to the rivets 
+## Back to rivets 
 
 State of a layout is like the face. Inside the example state is a javascript object.
 
@@ -32,3 +32,6 @@ layout: {
     }
 }
 ```
+
+Rivets monitors this object, so when a value changes rivets re-renders the template.
+Awesome!
