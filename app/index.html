@@ -20,8 +20,10 @@
   <!-- bind-class-* adds the class that is filled at the * when the selected value is true -->
   <div class="layout-container" bind-class-has-sidebar-collapsed="layout.sidebar.collapsed" id="layout-container">
     <div class="sidebar">
+      <!-- bind-on-* is an event attachment. You can use all the javascript events and the selected function will be run. -->
       <button bind-on-click="functions.toggleSidebar">Toggle</button>
 
+      <!-- The bind-unless removes the rendering if the value evaluates to true -->
       <button bind-on-click="functions.setPanelsBothMiddle" bind-unless="functions.bothPanelsAreMedium | call layout.panel.left.expanded layout.panel.right.expanded">Medium</button>
 
       <button bind-on-click="functions.saveState">Save state</button>
@@ -33,6 +35,8 @@
 
       <div class="panel left" bind-class-is-expanded="layout.panel.left.expanded" bind-class-is-collapsed="layout.panel.left.collapsed">
         <button bind-on-click="functions.setPanelLeftBig" bind-unless="layout.panel.left.expanded">Big</button>
+
+        <!-- The bind-if does the rendering if the value evaluates to true -->
         <button bind-on-click="functions.setPanelsBothMiddle" bind-if="layout.panel.left.expanded">Medium</button>
       </div>
 

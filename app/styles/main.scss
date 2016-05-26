@@ -5,6 +5,7 @@ $sidebarWidth: 300px;
 $sidebarWidthSmall: 80px;
 
 $speed: .6s;
+// See http://cubic-bezier.com/#.75,.07,.4,.89
 $easing: cubic-bezier(.75,.07,.4,.89);
 
 html, body {
@@ -58,6 +59,11 @@ html, body {
   background: blue;
   position: absolute;
   left: 0;
+
+  button {
+    float: left;
+    clear: both;
+  }
 }
 
 .panels-container {
