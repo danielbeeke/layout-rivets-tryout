@@ -1,6 +1,12 @@
 // Our namespace.
 window.octopus = {};
 
+// I like the bind prefix more than rv.
+// Rivets is very configurable.
+rivets.configure({
+    prefix: 'bind'
+});
+
 // For this component we use the namespace layout.
 octopus.layout = {
     toggleSidebar: function () {

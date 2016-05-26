@@ -17,27 +17,28 @@
   </head>
   <body>
 
-  <div class="layout-container" rv-class-has-sidebar-collapsed="layout.sidebar.collapsed" id="layout-container">
+  <!-- bind-class-* adds the class that is filled at the * when the selected value is true -->
+  <div class="layout-container" bind-class-has-sidebar-collapsed="layout.sidebar.collapsed" id="layout-container">
     <div class="sidebar">
-      <button rv-on-click="functions.toggleSidebar">Toggle</button>
+      <button bind-on-click="functions.toggleSidebar">Toggle</button>
 
-      <button rv-on-click="functions.setPanelsBothMiddle" rv-unless="functions.bothPanelsAreMedium | call layout.panel.left.expanded layout.panel.right.expanded">Medium</button>
+      <button bind-on-click="functions.setPanelsBothMiddle" bind-unless="functions.bothPanelsAreMedium | call layout.panel.left.expanded layout.panel.right.expanded">Medium</button>
 
-      <button rv-on-click="functions.saveState">Save state</button>
+      <button bind-on-click="functions.saveState">Save state</button>
 
-      <button rv-on-click="functions.restoreState">Restore state</button>
+      <button bind-on-click="functions.restoreState">Restore state</button>
     </div>
 
     <div class="panels-container">
 
-      <div class="panel left" rv-class-is-expanded="layout.panel.left.expanded" rv-class-is-collapsed="layout.panel.left.collapsed">
-        <button rv-on-click="functions.setPanelLeftBig" rv-unless="layout.panel.left.expanded">Big</button>
-        <button rv-on-click="functions.setPanelsBothMiddle" rv-if="layout.panel.left.expanded">Medium</button>
+      <div class="panel left" bind-class-is-expanded="layout.panel.left.expanded" bind-class-is-collapsed="layout.panel.left.collapsed">
+        <button bind-on-click="functions.setPanelLeftBig" bind-unless="layout.panel.left.expanded">Big</button>
+        <button bind-on-click="functions.setPanelsBothMiddle" bind-if="layout.panel.left.expanded">Medium</button>
       </div>
 
-      <div class="panel right" rv-class-is-expanded="layout.panel.right.expanded" rv-class-is-collapsed="layout.panel.right.collapsed">
-        <button rv-on-click="functions.setPanelRightBig" rv-unless="layout.panel.right.expanded">Big</button>
-        <button rv-on-click="functions.setPanelsBothMiddle" rv-if="layout.panel.right.expanded">Medium</button>
+      <div class="panel right" bind-class-is-expanded="layout.panel.right.expanded" bind-class-is-collapsed="layout.panel.right.collapsed">
+        <button bind-on-click="functions.setPanelRightBig" bind-unless="layout.panel.right.expanded">Big</button>
+        <button bind-on-click="functions.setPanelsBothMiddle" bind-if="layout.panel.right.expanded">Medium</button>
       </div>
 
     </div>
